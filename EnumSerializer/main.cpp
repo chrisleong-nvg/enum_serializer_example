@@ -18,11 +18,11 @@ int main()
 	c1.MakeNoise();
 	std::string cat = c1.Serialize();
 
-	Animal *newCat = Animal::Deserialize(cat);
-	newCat->MakeNoise();
+	Animal *newcat = Animal::Deserialize(cat);
+	newcat->MakeNoise();
 
-	Animal *newDog = Animal::Deserialize(dog);
-	newDog->MakeNoise();
+	Animal *newdog = Animal::Deserialize(dog);
+	newdog->MakeNoise();
 
 	return 0;
 }

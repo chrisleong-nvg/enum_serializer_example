@@ -12,14 +12,13 @@ public:
 	static Animal* Deserialize(const std::string& type);
 
 protected:
+	ENUM_STRING_PAIR_ENABLED;
 	enum class Type
 	{
 		Dog,
 		Cat,
-		Pig,
 		ENUM_SIZE_LAST
 	};
-	ENUM_STRING_PAIR_ENABLED;
 
 protected:
 	Animal(Type t);

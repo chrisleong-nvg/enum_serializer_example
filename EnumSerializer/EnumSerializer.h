@@ -13,7 +13,7 @@
 	struct EnumConverter::StrEnumContainer<EnumType>\
 	{\
 		using ENUM_T = EnumType;\
-		static constexpr EnumConverter::ARRAY_T<ENUM_T, (int)EnumType::ENUM_SIZE_LAST> StrEnumPairs\
+		static constexpr EnumConverter::ARRAY_T<ENUM_T, static_cast<size_t>(EnumType::ENUM_SIZE_LAST)> StrEnumPairs\
 		{\
 			{
 
@@ -34,8 +34,8 @@ static constexpr size_t constexprStringHash(char const* const str) noexcept
 	///djb2 hashing
 	return (
 		(*str != 0) ?
-		(static_cast<size_t>(*str) + 33 * constexprStringHash(str + 1)) :
-		5381
+		(static_cast<size_t>(*str) + 33ULL * constexprStringHash(str + 1)) :
+		5381ULL
 		);
 }
 

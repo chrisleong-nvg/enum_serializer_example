@@ -24,8 +24,7 @@ namespace
 
 ENUM_STRING_PAIR_START(Animal::Type)
 	ENUM_STRING_PAIR_ENTRY(Animal::Type::Dog),
-	ENUM_STRING_PAIR_ENTRY(Animal::Type::Cat),
-	ENUM_STRING_PAIR_ENTRY(Animal::Type::Pig)
+	ENUM_STRING_PAIR_ENTRY(Animal::Type::Cat)
 ENUM_STRING_PAIR_END()
 
 Animal::Animal(Type t)
